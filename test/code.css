@@ -1,0 +1,18 @@
+pre {
+  background-color: #222;
+  color: white;
+  font-family: "DejaVu Sans Mono", Monaco, monospaced;
+  margin: 10px;
+  padding: 10px; }
+
+code.erlang .comment {
+  color: rgb(174,174,174);
+  font-style: italic; }
+code.erlang .string {
+  color: rgb(101,176,66); }
+code.erlang .atom {
+  color: rgb(137,189,255); }
+code.erlang .variable {
+  color: rgb(62,135,227); }
+code.erlang .keyword, code.erlang .pp, code.erlang .punctuation {
+  color: rgb(226,137,100); }

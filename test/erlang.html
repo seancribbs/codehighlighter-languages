@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang='en-US' xml:lang='en-US' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <title>erlang code highlighting test</title>
+    <link href='code.css' rel='stylesheet' type='text/css' />
+    <script src="code_highlighter.js" type="text/javascript"></script>
+    <script src="../erlang.js" type="text/javascript"></script>
+  </head>
+<body>
+<pre><code class="erlang">%%% An Erlang Comment
+%% Preprocessor directive with atom
+-module(test).
+%% String
+io:format("Hello, ~s!~n", ["Erlang"]).
+%% Binary
+&lt;&lt;"A binary string"&gt;&gt;
+%% Function decl w/ variable
+start(Pid) ->
+  Pid ! go.
+%% Keyword
+car(List) when is_list(List) ->
+  [H|T] = List,
+  H.
+</code></pre>
+</body>
+</html>

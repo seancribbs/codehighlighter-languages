@@ -1,26 +1,26 @@
 CodeHighlighter.addStyle("erlang",{
+  punctuation: {
+    exp: /-(&gt;)?|;|\||\!/
+  },
   comment : {
     exp  : /%[^\n]+/
   },
-  brackets : {
-    exp  : /\(|\)|{|}/
+  bracket : {
+    exp  : /\(|\)|{|}|(&gt;&gt;)|(&lt;&lt;)/
   },
   string : {
     exp  : /"[^"]*"/
   },
-  keywords : {
+  keyword : {
     exp  : /\b(after|and|andalso|band|begin|bnot|bor|bsl|bsr|bxor|case|catch|cond|div|end|fun|if|let|not|of|or|orelse|query|receive|rem|try|when|xor)\b/
   },
-  macro : {
-    exp  : /\b\?\w+\b/
+  pp : {
+    exp : /\b(module|author|include|include_lib|behavior|behaviour|define)\b/
   },
   atom : {
-    exp  : /\b([a-z][@\w]*|'[^']')\b/
-  },
-  binary : {
-    exp : /<<.*>>/
+    exp  : /\b([a-z][@\w]*|'[^']*')\b/
   },
   variable : {
-    exp : /\b(_|_?([A-Z][@\w]*)*)\b/
+    exp : /\b(_|_?[A-Z][@\w]*)\b/
   }
 });
