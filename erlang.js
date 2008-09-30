@@ -15,7 +15,7 @@ CodeHighlighter.addStyle("erlang",{
     exp  : /\b(after|and|andalso|band|begin|bnot|bor|bsl|bsr|bxor|case|catch|cond|div|end|fun|if|let|not|of|or|orelse|query|receive|rem|try|when|xor)\b/
   },
   pp : {
-    exp : /\b(module|author|include|include_lib|behavior|behaviour|define)\b/
+    exp : /\b(module|author|include|include_lib|behavior|behaviour|define|export)\b/
   },
   atom : {
     exp  : /\b([a-z][@\w]*|'[^']*')\b/
