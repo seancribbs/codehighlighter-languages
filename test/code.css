@@ -16,3 +16,19 @@ code.erlang .variable {
   color: rgb(62,135,227); }
 code.erlang .keyword, code.erlang .pp, code.erlang .punctuation {
   color: rgb(226,137,100); }
+
+code.haml .tag {
+  color: rgb(137,189,255); }
+code.haml .idDiv {
+  color: rgb(62,135,227); }
+code.haml .classDiv {
+  color: rgb(226,137,100); }
+code.haml .comment {
+  color: rgb(174,174,174);
+  font-style: italic; }
+code.haml .preserve, code.haml .interpolate, code.haml .emit {
+  color: rgb(226,137,100); }
+code.haml .string {
+  color: rgb(101,176,66); }
+code.haml .symbol {
+  color: orange; }

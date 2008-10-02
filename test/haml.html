@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang='en-US' xml:lang='en-US' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <title>Haml code highlighting test</title>
+    <link href='code.css' rel='stylesheet' type='text/css' />
+    <script src="code_highlighter.js" type="text/javascript"></script>
+    <script src="../haml.js" type="text/javascript"></script>
+  </head>
+<body>
+<pre><code class="haml">!!! Strict
+%html{html_attrs}
+  %head
+    %title A test Haml page
+  %body
+    #content{:style => "width: 960px"}
+      .left
+        Left box
+        ~ preserve_this
+      .right
+        Right box
+        = emit_output
+    #footer.clear
+      Footer
+      == #{copyright} Interpolated text
+      / A Haml content
+</code></pre>
+</body>
+</html>
