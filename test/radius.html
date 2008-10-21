@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang='en-US' xml:lang='en-US' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>Radius Syntax Highlighter for code_highlighter.js</title>
+<script src="code_highlighter.js"></script>
+<script src="../radius.js"></script>
+<style>
+.radius .tag
+  { font-weight: 900; }
+.radius .attribute
+  { color: #552109; }
+.radius .comment
+  { color: #2d669a; }
+.radius .value
+  { background-color: #ecf7f7; color: #2a9a66; }
+.radius .tag
+  { color: #761b48; }
+</style>
+</head>
+<body>
+<pre><code class="radius"># self closing tag
+&lt;r:title/&gt;
+
+# boolean attributes
+&lt;r:content part=&quot;my_part&quot; inherit=&quot;true&quot;&gt;&lt;/r:content&gt;
+
+&lt;r:content part=&quot;your_part&quot; inherit=&quot;false&quot;&gt;&lt;/r:content&gt;
+
+# tag attributes
+&lt;r:link anchor=&quot;interesting-content&quot; class=&quot;bright_highlight&quot;/&gt;
+
+# nested tags
+&lt;r:children:each order=&quot;desc&quot;&gt;
+  &lt;r:child&gt;
+    &lt;r:slug/&gt;
+  &lt;/r:child&gt;
+&lt;/r:children&gt;
+
+# html remains unstyled
+
+&lt;r:children:each order=&quot;desc&quot;&gt;
+  &lt;h1&gt;&lt;r:title/&gt;&lt;/h1&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+     do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+&lt;/r:children&gt;
+
+&lt;!-- html style comments are highlighted --&gt;
+
+&lt;r:parent&gt;&lt;r:slug/&gt;&lt;/r:parent&gt;
+
+&lt;!-- radius inside html --&gt;
+&lt;a href=&quot;&lt;r:find url=&quot;/page/1&quot;&gt;&lt;r:children:first&gt;&lt;r:slug/&gt;&lt;/r:children:first&gt;&lt;/r:find&gt;&quot;&gt;&lt;/a&gt;
+</code></pre>
+</body>
+</html>
